@@ -2,9 +2,7 @@ DNMP（Docker + Nginx + MySQL + PHP7/5 + Redis）是一款全功能的**LNMP一�
 
 > 使用前最好提前阅读一遍[目录](#目录)，以便快速上手，遇到问题也能及时排除。交流QQ一群：**572041090（已满）**，二群：**300723526**。
 
-**[[ENGLISH]](README-en.md)** -
-[**[GitHub地址]**](https://github.com/yeszao/dnmp) -
-[**[Gitee地址]**](https://gitee.com/yeszao/dnmp)
+[**[GitHub地址]**](https://github.com/linxianfu/docker_lnmp)
 
 DNMP项目特点：
 1. `100%`开源
@@ -83,7 +81,7 @@ DNMP项目特点：
     - `docker-compose 1.7.0+`
 2. `clone`项目：
     ```
-    $ git clone https://github.com/yeszao/dnmp.git
+    $ git clone https://github.com/linxianfu/docker_lnmp.git
     ```
 3. 如果不是`root`用户，还需将当前用户加入`docker`用户组：
     ```
@@ -437,7 +435,7 @@ Redis连接信息如下：
 
 ## 8 常见问题
 ### 8.1 如何在PHP代码中使用curl？
-参考这个issue：[https://github.com/yeszao/dnmp/issues/91](https://github.com/yeszao/dnmp/issues/91)
+参考这个issue：[https://github.com/linxianfu/docker_lnmp/issues/91](https://github.com/linxianfu/docker_lnmp/issues/91)
 
 ### 8.2 Docker使用cron定时任务 
 [Docker使用cron定时任务](https://www.awaimai.com/2615.html)
