@@ -32,6 +32,7 @@ ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \
     && chmod +x /usr/bin/composer
 ENV COMPOSER_HOME=/tmp/composer
+RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/composer
 
 # Install nodejs and npm and yarn...
 RUN apk add npm yarn
