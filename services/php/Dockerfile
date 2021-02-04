@@ -28,6 +28,15 @@ RUN apk --no-cache add tzdata \
 RUN apk add gnu-libiconv libstdc++ --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/edge/community/ --allow-untrusted
 ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
+# Install composer and change it's cache home
+RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \
+    && chmod +x /usr/bin/composer
+ENV COMPOSER_HOME=/tmp/composer
+
+# Install nodejs and npm and yarn...
+RUN apk add npm yarn
+RUN npm config set registry=https://registry.npm.taobao.org
+RUN yarn config set registry 'https://registry.npm.taobao.org'
 
 # php image's www-data user uid & gid are 82, change them to 1000 (primary user)
 RUN apk --no-cache add shadow && usermod -u 1000 www-data && groupmod -g 1000 www-data
