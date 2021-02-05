@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-echo '<h1 style="text-align: center;">欢迎使用DNMP！</h1>';
+echo '<h1 style="text-align: center;">欢迎使用Docker-LNMP！</h1>';
 echo '<h2>版本信息</h2>';
 
 echo '<ul>';
@@ -34,7 +34,6 @@ function getMysqlVersion()
     } else {
         return 'PDO_MYSQL 扩展未安装 ×';
     }
-
 }
 
 /**
@@ -64,7 +63,7 @@ function getMongoVersion()
     if (extension_loaded('mongodb')) {
         try {
             $manager = new MongoDB\Driver\Manager('mongodb://root:123456@mongodb:27017');
-            $command = new MongoDB\Driver\Command(array('serverStatus'=>true));
+            $command = new MongoDB\Driver\Command(array('serverStatus' => true));
 
             $cursor = $manager->executeCommand('admin', $command);
 
@@ -88,4 +87,3 @@ function printExtensions()
     }
     echo '</ol>';
 }
-
