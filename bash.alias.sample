@@ -12,6 +12,7 @@ alias start-service='docker-compose start'
 alias rm-service='docker-compose rm'
 alias service-start='docker-compose up -d'
 alias start-all='docker start $(docker ps -aq)'
+alias restart-all='docker restart $(docker ps -aq)'
 alias stop-all='docker stop $(docker ps -aq)'
 
 # php7 cli
